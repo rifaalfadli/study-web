@@ -1,0 +1,234 @@
+# 🌐 Proyek Belajar HTML Dasar & Deployment ke Netlify
+
+## 📘 Apa Itu HTML?
+
+HTML (HyperText Markup Language) adalah **bahasa markup standar** untuk membuat halaman web. HTML digunakan untuk:
+
+- Menyusun struktur konten web.
+- Menampilkan teks, gambar, link, form, dan elemen-elemen lainnya.
+- Memberi makna semantik pada halaman.
+
+HTML **tidak bersifat fungsional seperti JavaScript**, tetapi menjadi **pondasi utama** dari semua halaman website.
+
+## 🎯 Tujuan Proyek Ini
+
+- Mempelajari struktur HTML dasar secara praktis.
+- Mengenal elemen-elemen semantik HTML seperti `<header>`, `<main>`, `<section>`, `<footer>`, dll.
+- Membuat halaman HTML sederhana berisi heading, paragraf, gambar, form, dan daftar.
+- Melakukan **deployment ke Netlify** agar halaman bisa diakses online.
+
+## 🏗️ Struktur File
+
+```bash
+📁 Koribali-WEB-TrainingHTML1/
+├── index.html
+├── README.md
+└── 📁 image/
+    ├── gambar-kucing.jpg
+    ├── proses-drag-and-drop.png
+    ├── rename-link.png
+    ├── tampilan-formulir.png
+    ├── tampilan-navigasi.png
+    ├── tampilan-tentang.png
+    └── tampilan-web.png
+```
+
+## 🧱 Struktur HTML
+
+File `index.html` dibangun dengan struktur dasar HTML5:
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
+</html>
+```
+
+- `<!DOCTYPE html>` memberi tahu browser bahwa ini adalah dokumen HTML5.
+- `<html lang="id">` berarti isi halaman berbahasa Indonesia.
+- Elemen `<head>` berisi metadata, judul, dan pengaturan viewport.
+- Elemen `<body>` memuat semua konten yang tampil di browser.
+
+### Elemen-Elemen HTML:
+
+---
+
+### 1. `<head>` – Informasi Meta dan Judul
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dokumen HTML Semantik</title>
+</head>
+```
+
+- `charset` untuk pengkodean karakter.
+- `viewport` penting agar responsif di layar kecil.
+- `title` ditampilkan di tab browser.
+
+---
+
+### 2. `<header>` – Judul Halaman
+
+```html
+<header>
+  <h1>My First Heading</h1>
+</header>
+```
+
+- Digunakan sebagai bagian paling atas dari halaman.
+- `<h1>` menandakan judul utama dari halaman web.
+
+---
+
+### 3. `<nav>` – Navigasi Halaman
+
+```html
+<nav>
+  <a href="#tentang">Tentang</a> |
+  <a href="#formulir">Formulir</a>
+</nav>
+```
+
+- Digunakan untuk menampilkan tautan navigasi ke bagian lain dari halaman.
+- Menggunakan atribut `href="#id"` agar bisa lompat ke bagian tertentu.
+
+📸 Tampilan di browser:
+
+![Tampilan Navigasi](image/tampilan-navigasi.PNG)
+
+---
+
+### 4. `<main>` – Konten Utama
+
+#### a. `<section id="tentang">` – Paragraf, Gambar, Tautan
+
+Menampilkan paragraf, link ke Google, dan gambar kucing.
+
+```html
+<section id="tentang">
+  <h2>My Second Heading</h2>
+  <p title="paragraph 1">My first paragraph</p>
+  <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+    >Kunjungi Google</a
+  >
+  <img
+    src="image/gambar-kucing.jpg"
+    alt="gambar kucing"
+    width="200"
+    height="200"
+  />
+  <pre>
+  ...
+  </pre>
+</section>
+```
+
+- `target="_blank"` membuka tab baru.
+- `rel="noopener noreferrer"` untuk keamanan.
+- `<img>` menampilkan gambar, `<pre>` mempertahankan format teks asli.
+
+📸 Tampilan di browser:
+
+![Tampilan Navigasi](image/tampilan-tentang.PNG)
+
+---
+
+#### b. `<section id="formulir">` – Formulir Pendaftaran
+
+Formulir dengan:
+
+- Input text, email, password
+- Radio button untuk gender
+- Checkbox untuk minat
+- Dropdown `select` untuk kota asal
+- Textarea untuk alamat
+- Tombol submit
+
+```html
+<section id="formulir">
+  <h2>Formulir Pendaftaran</h2>
+  <form>
+    <label>Nama:</label>
+    <input type="text" name="nama" /><br />
+    ...
+    <label>Alamat:</label>
+    <textarea name="alamat"></textarea><br />
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+```
+
+📸 Tampilan di browser:
+
+![Tampilan Navigasi](image/tampilan-formulir.PNG)
+
+---
+
+#### c. `<section>` – Daftar Aktivitas
+
+```html
+<ul>
+  ...
+</ul>
+
+<ol>
+  ...
+</ol>
+```
+
+- `<ul>`: unordered list (tanpa urutan)
+- `<ol>`: ordered list (dengan urutan)
+
+---
+
+### 5. `<footer>` – Kaki Halaman
+
+```html
+<footer>
+  <p>&copy; 2025 Website Rifa</p>
+</footer>
+```
+
+Penutup halaman, biasanya untuk hak cipta atau kontak.
+
+---
+
+## 🚀 Deployment ke Netlify
+
+### Apa Itu Netlify?
+
+Netlify adalah platform hosting gratis untuk website statis (seperti HTML, CSS, JS). Proses deploy sangat cepat dan tidak memerlukan server manual.
+
+### Langkah-langkah:
+
+1. Buka [https://netlify.com](https://netlify.com)
+2. Login dengan GitHub (jika perlu)
+3. Klik **"Add new site" → "Deploy manually"**
+4. Drag & drop folder `Koribali-WEB-TrainingHTML1`  
+   <img src="image/proses-drag-and-drop.PNG" alt="Proses Drag & Drop"/>
+5. Tunggu hingga proses selesai
+6. Salin URL hasil deployment
+
+### Cara Rename Link Netlify:
+
+Agar URL tidak acak seperti https://glorious-sunset-12345.netlify.app, kamu bisa mengganti namanya:
+
+1. Masuk ke dashboard situs kamu di Netlify
+2. Klik nama situs → pilih Site settings
+3. Cari bagian Site name, lalu klik Edit site name
+4. Ganti nama misalnya jadi belajar-html-rifa
+5. Selesai! URL berubah jadi <https://belajar-html-rifa.netlify.app>
+   <img src="image/rename-link.PNG" alt="Rename Link"/>
+
+---
+
+## 📸 Tampilan Website:
+
+![Tampilan Navigasi](image/tampilan-web.PNG)

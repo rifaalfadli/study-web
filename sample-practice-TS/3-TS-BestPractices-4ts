@@ -1,0 +1,42 @@
+// Use Union Types and Enums for Clearer Code:
+// Using a union type
+type Result = string | number;
+
+// Using an enum
+enum Status {
+    Pending,
+    Approved,
+    Rejected
+}
+
+// Function with union type parameter
+function processResult(result: Result): void {
+  if (typeof result === "string") {
+    console.log(`Result is a string: ${result}`);
+  } else {
+    console.log(`Result is a number: ${result}`);
+  }
+}
+
+// Function with enum parameter
+function updateStatus(status: Status): void {
+  switch (status) {
+    case Status.Pending:
+      console.log("Status: Pending");
+      break;
+    case Status.Approved:
+      console.log("Status: Approved");
+      break;
+    case Status.Rejected:
+      console.log("Status: Rejected");
+      break;
+  }
+}
+
+// Contoh pemanggilan
+processResult("Success");
+processResult(200);
+
+updateStatus(Status.Pending);
+updateStatus(Status.Approved);
+updateStatus(Status.Rejected);

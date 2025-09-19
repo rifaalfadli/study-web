@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumen HTML Semantik</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>My First Heading</h1>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+      <a href="#tentang">Tentang</a> |
+      <a href="#formulir">Formulir</a>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main>
+      <!-- Seksi Paragraf dan Gambar -->
+      <section id="tentang">
+        <h2>My Second Heading</h2>
+        <p title="paragraph 1">My first paragraph</p>
+        <p title="Description of W3Schools" style="color: rgb(110, 175, 201)">
+          My first paragraph
+        </p>
+        <a
+          href="https://www.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Kunjungi Google</a
+        >
+        <br />
+        <img
+          src="image/gambar-kucing.JPG"
+          alt="gambar kucing"
+          width="200"
+          height="200"
+        />
+        <p>The pre tag preserves both spaces and line breaks:</p>
+        <pre>
+My Bonnie lies over the ocean.
+My Bonnie lies over the sea.
+My Bonnie lies over the ocean.
+Oh, bring back my Bonnie to me.
+        </pre>
+      </section>
+
+      <!-- Formulir -->
+      <section id="formulir">
+        <h2>Formulir Pendaftaran</h2>
+        <form>
+          <label for="nama">Nama Lengkap:</label><br />
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama"
+          /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="contoh@email.com"
+          /><br /><br />
+
+          <label for="password">Kata Sandi:</label><br />
+          <input type="password" id="password" name="password" /><br /><br />
+
+          <label>Jenis Kelamin:</label><br />
+          <input type="radio" id="pria" name="gender" value="pria" />
+          <label for="pria">Pria</label>
+          <input type="radio" id="wanita" name="gender" value="wanita" />
+          <label for="wanita">Wanita</label><br /><br />
+
+          <label>Minat:</label><br />
+          <input type="checkbox" id="coding" name="minat" value="coding" />
+          <label for="coding">Coding</label><br />
+          <input type="checkbox" id="desain" name="minat" value="desain" />
+          <label for="desain">Desain</label><br />
+          <input type="checkbox" id="olahraga" name="minat" value="olahraga" />
+          <label for="olahraga">Olahraga</label><br /><br />
+
+          <label for="kota">Kota Asal:</label><br />
+          <select id="kota" name="kota">
+            <option value="">--Pilih kota--</option>
+            <option value="jakarta">Jakarta</option>
+            <option value="bogor">Bogor</option>
+            <option value="bandung">Bandung</option>
+            <option value="yogyakarta">Yogyakarta</option></select
+          ><br /><br />
+
+          <label for="alamat">Alamat:</label><br />
+          <textarea
+            id="alamat"
+            name="alamat"
+            rows="4"
+            cols="50"
+            placeholder="Masukkan alamat Anda"
+          ></textarea
+          ><br /><br />
+
+          <input type="submit" value="Kirim" />
+        </form>
+      </section>
+
+      <!-- Daftar -->
+      <section>
+        <h2>Aktivitas</h2>
+        <ul>
+          <li>Makan</li>
+          <li>Minum</li>
+        </ul>
+        <ol>
+          <li>Makan</li>
+          <li>Minum</li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Website Rifa</p>
+    </footer>
+  </body>
+</html>
